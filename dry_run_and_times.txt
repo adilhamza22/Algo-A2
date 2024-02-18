@@ -1,0 +1,36 @@
+
+//qs3-2.2
+//  DRY RUN
+
+//  INITIAL ARRAY[(10, a) (5, a) (4, a) (10, b) (3, a) (4, b) (1, a)]
+
+// STEP#1:
+//     MINIMUM ELEMENT (1, a)
+//     [(1, a) (10, a) (5, a) (4, a) (10, b) (3, a) (4, b)]
+// STEP#2:
+//     MINIMUM ELEMENT (3, a)
+//     [(1, a) (3, a) (10, a) (5, a) (4, a) (10, b) (4, b)]
+// STEP#3:
+//     MINIMUM ELEMENT (4, a)
+//     [(1, a) (3, a) (4, a) (10, a) (5, a) (10, b) (4, b)]
+// STEP#4:
+//     MINIMUM ELEMENT (4, b)
+//     [(1, a) (3, a) (4, a) (4, b) (10, a) (5, a) (10, b)]
+// STEP#5:
+//     MINIMUM ELEMENT (5, a)
+//      [(1, a) (3, a) (4, a) (4, b) (5, a) (10, a) (10, b)]
+// STEP#6:
+//     MINIMUM ELEMENT (10, a)
+//     [(1, a) (3, a) (4, a) (4, b) (5, a) (10, a) (10, b)]
+
+// SORTED ARRAY[(1, a) (3, a) (4, a) (4, b) (5, a) (10, a) (10, b)]
+
+
+// qs3-2.2
+
+// | n     | Merge Sort (n/2) | Quick Sort (Random Pivot) | Quick Sort (Median of Three) |
+// |-------|------------------|----------------------------|------------------------------|
+// | 100   | 0ns              | 0ns                        | 0ns                          |
+// | 1000   | 0ns              | 0ns                        | 0ns                          |
+// | 10000   | 6ns              | 4ns                        | 4ns                          |
+// | 100000   | 65ns              | 235ns                        | 248ns                          |
